@@ -1,14 +1,12 @@
-# [Day 3] 編譯流程
 在學習如何建構一個專案之前，必須了解編譯的各個流程，因為一個專案從原始碼階段開始到最後產生出來的執行檔，這中間經過的編譯流程需要我們自行定義CMake的指令來控制。
 今天就讓我們從那個經典的 "Hello World!" 範例開始了解一個專案是如何編譯的吧!
 ## Sample Code
 Sample Code都會放在Github上，只要克隆下來就可以了!
 > $ git clone https://github.com/m11112089/2023_iT_CMake.git
-
 > $ cd 2023_iT_CMake/Day3
 ## 編譯流程
 這整個過程可以大致上分成四個步驟，分別為預處理 (pre-processing)、編譯 (compilation)、彙編 (assembly) 與鏈接 (linking)。
-![](https://hackmd.io/_uploads/ryZbbNEJa.png)
+![https://ithelp.ithome.com.tw/upload/images/20230917/20162026p35BZ3BNVi.png](https://ithelp.ithome.com.tw/upload/images/20230917/20162026p35BZ3BNVi.png)
 
 
 ### 預處理 (pre-processing)
@@ -40,7 +38,7 @@ Sample Code都會放在Github上，只要克隆下來就可以了!
 ### 鏈接 (linking)
 這個步驟是讓編譯器能夠知道原始碼中外部函數或是外部變數明確的位址 。比方說，如果我們在檔案 main.cpp 中引用了別的檔案 func.cpp 中的 foo() 函數。我們必須先知道這個函數到底在哪裡，才可以呼叫它。鏈結要做的事情，就是把多個不同的文件組合在一起，成為一個完整的整體。
 因為目前只有單一檔案，練接的都是系統預設的標準庫(Standard Libraries)，我們不用自行練接，而多檔案的練接會在之後詳細講解。
-![](https://miro.medium.com/max/1094/1*ef_EVqUmv1I9OckQ2Z_C5w.png =400x250)
+![https://ithelp.ithome.com.tw/upload/images/20230917/20162026cpWuPHmTrv.png](https://ithelp.ithome.com.tw/upload/images/20230917/20162026cpWuPHmTrv.png)
 
 >**將 main.o 連結到 名稱為main的執行檔**
 > $ g++ main.o -o main
@@ -59,16 +57,16 @@ Sample Code都會放在Github上，只要克隆下來就可以了!
 ### 執行(execute)
 >**執行名稱為main的執行檔**
 > $ ./main
-### 總結流程總結
-![](https://hackmd.io/_uploads/By8DmE4Ja.png)
+### 總流程
+![https://ithelp.ithome.com.tw/upload/images/20230917/20162026R2peR0nZCc.png](https://ithelp.ithome.com.tw/upload/images/20230917/20162026R2peR0nZCc.png)
 
 
 
 ### 因為只有一個檔案，所以也可以直接生成執行檔執行
 > $ g++ main.cpp -o main
 > $ ./main
-> 
-![](https://hackmd.io/_uploads/B13FQNVk6.png)
+
+![https://ithelp.ithome.com.tw/upload/images/20230917/201620260Sgzrg7mV2.png](https://ithelp.ithome.com.tw/upload/images/20230917/201620260Sgzrg7mV2.png)
 
 
 
