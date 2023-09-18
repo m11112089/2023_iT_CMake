@@ -1,7 +1,3 @@
-今天會說明make, cmake, makefile, CMakeLists.txt與g++之間的關係，並解釋為什麼要使用CMake。
-> $ git clone https://github.com/m11112089/2023_iT_CMake.git
-> $ cd 2023_iT_CMake/Day4
-
 ## Make
 ### Make簡介
 在軟體開發中，make 是一個工具程式，經由讀取一個叫做 Makefile 的檔案，自動化建構C/C++軟體。
@@ -28,6 +24,9 @@ main:
 - 編譯與執行
 > $ make
 > $ ./main
+
+![https://ithelp.ithome.com.tw/upload/images/20230918/20162026Aqd6Qo5WHf.png](https://ithelp.ithome.com.tw/upload/images/20230918/20162026Aqd6Qo5WHf.png)
+可以看到make調用了g++，生成了執行檔。
 
 這樣看起來makefile還滿簡單的阿，除了有跨平台的需求之外，為什麼需要使用CMake呢？
 我們先看一下 GNU make 網站的範例 [Appendix C Complex Makefile Example](https://www.gnu.org/software/make/manual/make.html#Complex-Makefile)。
