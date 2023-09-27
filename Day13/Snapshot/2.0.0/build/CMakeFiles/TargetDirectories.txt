@@ -1,0 +1,3 @@
+/home/kai/2023_iT_CMake/Day13/build/CMakeFiles/main.dir
+/home/kai/2023_iT_CMake/Day13/build/CMakeFiles/edit_cache.dir
+/home/kai/2023_iT_CMake/Day13/build/CMakeFiles/rebuild_cache.dir
