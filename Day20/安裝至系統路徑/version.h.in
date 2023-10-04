@@ -1,0 +1,3 @@
+#define cmake_totorial_VERSION_MAJOR ${cmake_totorial_VERSION_MAJOR}
+#define cmake_totorial_VERSION_MINOR ${cmake_totorial_VERSION_MINOR}
+#define cmake_totorial_VERSION_PATCH ${cmake_totorial_VERSION_PATCH}
