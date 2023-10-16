@@ -18,7 +18,7 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(main src/main.cpp)
 # 將 main.cpp 編譯成可執行文件 main
 target_link_libraries(main ${OpenCV_LIBS})
-# 將 OpenCV 的 library 路徑加入到專案中
+# 將 OpenCV 的 library 鍊結到 main 
 
 
 configure_file(version.h.in version.h)
